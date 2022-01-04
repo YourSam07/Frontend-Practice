@@ -1,0 +1,113 @@
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);    
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--pale-blue) url(/images/pattern-background-desktop.svg) no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.card{
+    max-width: 350px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.head img{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.title{
+    font-weight: 900;
+    font-size: 22px;
+    margin: 12px;
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+.para{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--desaturated-blue);
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.price{
+    background-color: var(--very-pale-blue);
+    margin: 1.6rem 2rem 1.5rem 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.details strong{
+    font-weight: 900;
+    font-size: 0.9rem; 
+    color: var(--dark-blue);
+}
+
+.details p{
+    color:hsl(224, 23%, 55%);
+    font-size: 0.9rem; 
+    line-height: 1.7rem;
+}
+
+.price a{
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: hsl(245, 75%, 52%);
+    justify-self: end;
+    align-self: center;
+}
+
+.price a:hover{
+    text-decoration:  none;
+    color: hsl(245, 83%, 68%);
+}
+
+.proceed-bt{
+    background-color: hsl(245, 75%, 52%);
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 1.6rem 2rem 1.5rem 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    color:white;
+    box-shadow: 0 18px 30px -7px rgb(197, 189, 245)
+}
+
+.proceed-bt:hover{
+    background-color: hsl(245, 83%, 68%);
+    cursor: pointer;
+}
+
+.cancel{
+    text-align: center;
+    color:var(--desaturated-blue);
+    font-weight: 700;
+    margin: 1rem auto;
+}
+
+.cancel:hover{
+    color: var(--dark-blue);
+    cursor: pointer;
+}
