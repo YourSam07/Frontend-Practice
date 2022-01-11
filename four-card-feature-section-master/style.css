@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very-Light-Gray);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    padding: 50px 150px 20px 150px;
+}
+
+.header{
+    /* background-color: violet; */
+    width:45%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heading{
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+    font-size: 2rem;
+}
+
+.sub-heading{
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+    font-size: 2rem;
+    margin-top: -5px;
+}
+
+.sub-text{
+    color:var(--Grayish-Blue);
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+}
+
+.box{
+    width: 350px;
+    height: 225px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 12px -8px hsl(234deg 30% 76%),
+    -10px 10px 12px -8px hsl(234deg 30% 76%);
+    padding: 20px 40px;
+    margin: 0px 20px 20px 20px;
+}
+
+.box h3{
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.box p{
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+}
+
+.box img{
+    height: 60px;
+    width: 60px;
+    margin: 50px 0px 10px 220px;
+}
+
+#box1{
+    border-top: 5px solid var(--Cyan);
+    margin-top: 95px;
+}
+
+#box2{
+    border-top: 4px solid var(--Red);
+    margin-top: -30px;
+}
+
+#box3{
+    border-top: 4px solid var(--Orange);
+    margin-top: 0px;
+}
+
+#box4{
+    border-top: 4px solid var(--Blue);
+    margin-top: 95px;
+}
+
+@media only screen and (max-width: 420px) {
+    .container{
+        grid-template-rows: 1fr;
+        padding: 0px 0px;
+    }
+
+    .header{
+        width: 65%;
+        margin-bottom: 50px
+    }
+
+    .heading, .sub-heading{
+        font-size: 1.5rem;
+    }
+
+    .boxes{
+        grid-template-columns: 1fr;
+    }
+
+    .box{
+        margin-bottom: 50px;
+    }
+    #box1{
+        margin-top: 0px;
+        margin-bottom: 82px;
+    }
+
+    #box4{
+        margin-top: 0px;
+    }    
+}
