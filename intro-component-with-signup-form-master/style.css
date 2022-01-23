@@ -95,15 +95,15 @@ body{
     position: absolute;
     right: 10px;
     top: 16px;
-    visibility: hidden;
+    /* display: none; */
 }
 
-.show-err-logo{
-    visibility: visible;
+.show-err{
+    display: block;
 }
 
 .err-msg{
-    display: none;
+    /* display: none; */
     position: absolute;
     right: 5px;
     top: 55px;
@@ -111,8 +111,8 @@ body{
     font-size: 13px;
 }
 
-.show-err-msg{
-    display: block;
+.dont-show-err{
+    display: none;
 }
 
 .btn{
@@ -129,6 +129,10 @@ body{
     box-shadow: 0px 4px 4px 0px #00ba00;
 }
 
+.btn:hover{
+    cursor: pointer;
+}
+
 .form-foot{
     font-size: 10px;
     color: gray;
@@ -137,4 +141,34 @@ body{
 
 .form-foot span{
     color: var(--Red);
+}
+
+
+@media only screen and (max-width: 430px){
+    body {
+        background-image: url(/images/bg-intro-mobile.png);
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .leftside{
+        padding: 0;
+        margin: 50px 30px;
+        text-align: center;
+    }
+
+    .heading{
+        font-size: 2rem;
+    }
+
+    .rightside{
+        padding-top: 40px;
+        padding-left: 30px;
+    }
+
+    .free, #form{
+        width: 90%;
+    }
 }
