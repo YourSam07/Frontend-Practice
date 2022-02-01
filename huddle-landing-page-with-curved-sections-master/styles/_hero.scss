@@ -1,0 +1,40 @@
+.hero{
+    &__text{
+        padding: 1.5rem; 
+        text-align: center;
+        h1{
+            color: $Very-Dark-Cyan;
+            font-family: $heading;
+            font-weight: 700;
+            @include breakpoint-up(medium){font-size: 2.5rem;}
+            @include breakpoint-up(large){font-size: 3rem;}
+        }
+        p{
+            color: $Very-Dark-Cyan;
+            font-size: $fs-sm - 0.1;
+            // margin: 0rem;
+            @include breakpoint-up(medium){margin: 0 5rem; font-size: $fs-sm}
+            @include breakpoint-up(large){margin: 0 15rem; font-size: 1.2rem}
+            @include breakpoint-up(xlarge){margin: 0 25rem; font-size: 1.4rem}
+        }
+        button{
+            background-color: $Pink;
+            color: white;
+            border: none;
+            box-shadow: 0 3px 5px 0 #8c8484;
+            margin-top: 2.5rem;
+            @include breakpoint-up(medium){padding: 0.6rem 2rem; font-size: 1.2rem}
+            @include breakpoint-up(large){padding: 0.8rem 3.5rem}
+            &:hover{
+                background-color: $Light-Pink;
+            }
+        }
+    }
+    &__img{
+        // margin: 2rem 0 4rem 0;
+        img{
+            width: 55%;
+            @include breakpoint-down(large){width: 70%;}
+        } 
+    }
+}

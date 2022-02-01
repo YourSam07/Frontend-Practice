@@ -1,0 +1,86 @@
+.footer{
+    flex-direction: column;
+    background-color: $Very-Dark-Cyan;
+    color: white;
+    position: relative;
+    padding: 3rem 2rem;
+    &::before{
+        content: "";
+        display: block;
+        height: 10rem;
+        width: 100%;
+        background-image: url(/images/bg-footer-top-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+        position: absolute;
+        top: -8%;
+        left: 0;
+        z-index: -1;
+    }
+    p{
+        font-size: 0.75rem;
+    }
+    input{
+        width: 100%;
+        border-radius: 0.4rem;
+        font-size: $fs-lg;
+        border: none;
+    }
+    button{
+        border-radius: 0.4rem; 
+        border: none;
+        float: right;
+        margin: 1rem 0;
+        background-color: $Pink;
+        color: white;
+        &:hover{
+            background-color: $Light-Pink;
+        }
+    }
+    .logo{
+        img{
+            filter: invert(100%) sepia(100%) saturate(14%) hue-rotate(212deg) brightness(104%) contrast(104%);
+            width: 70%;
+        }
+    }
+    .phone, .email{
+        font-size: $fs-sm;
+        span{
+            margin-right: 1rem;
+        }
+    }
+    .icons{
+        margin-top: 2rem;
+        a:not(:last-child){
+            margin-right: 1rem;
+        }
+        i{
+            font-size: 1.4rem;
+            color: white;
+        }
+    }
+    a:hover{
+        i{
+            color: $Pink;
+        }
+    }
+}
+
+@include breakpoint-up(medium){
+    .footer{
+        &::before{
+            background-image: url(/images/bg-footer-top-desktop.svg);
+            background-size: cover;
+            top: -59%;
+        }
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        padding: 0 7rem;
+        padding-bottom: 3rem;
+        .newsletter, .contact{
+            margin: 0 10rem;
+        }
+
+    }
+}
