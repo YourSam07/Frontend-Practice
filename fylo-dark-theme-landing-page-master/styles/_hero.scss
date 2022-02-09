@@ -1,0 +1,144 @@
+.hero{
+    text-align: center;
+    &_img{
+        img{
+            height: 200px;
+            width: 280px;
+        }
+        margin-bottom: 2rem;
+    }
+    &_heading{
+        color: white;
+        h1{ padding: 0.1rem;}
+        p { 
+            &::before{
+                content: "";
+                background-image: url(/images/bg-curvy-mobile.svg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: -100%;
+                left: 0%;
+                z-index: -1;
+            }
+            position: relative;
+            background-color: $Bg-Dark-Blue;
+            font-size: 0.85rem;
+            @include breakpoint-up(xmobile){font-size: 0.95rem; padding: 1rem 1.7rem;}
+            padding: 1rem;
+        }
+    }
+    &_btn_container{
+        background-color: $Bg-Dark-Blue;
+    }
+    &_btn{
+        border-radius: 2rem;
+        background-image: linear-gradient(to right, $Cyan, $Blue);
+        font-weight: 700;
+        width: 65%;
+        @include breakpoint-up(xmobile){width: 50%;}
+        margin: 2rem 0;
+        font-size: 0.9rem;
+        &:hover{background-image: none;
+            background-color: $Blue;}
+    }
+}
+
+
+@include breakpoint-up(tablet){
+    .hero{
+        &_img{
+            img{
+                height: 250px;
+                width: 380px;
+            }
+        }
+        &_heading{
+            
+            h1{ 
+                margin: 0 4rem;
+                font-size: 2rem;
+            }
+            p{
+                &::before{
+                    background-image: url(/images/bg-curvy-desktop.svg);
+                    // background-size: ;
+                    height: 325%;
+                    top: -325%;
+                }
+                font-size: 0.95rem;
+                padding: 0.5rem 10rem;
+            }
+        }
+        &_btn{
+            width: 30%;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@include breakpoint-up(laptop){
+    .hero{
+        &_img{
+            img{
+                height: 280px;
+                width: 400px;
+            }
+        }
+        &_heading{
+            h1{ 
+                margin: 0 8rem;
+                font-size: 2.1rem;
+            }
+            p{
+                &::before{
+                    background-image: url(/images/bg-curvy-desktop.svg);
+                    // background-size: ;
+                    height: 325%;
+                    top: -325%;
+                }
+                padding: 0.5rem 17rem;
+                font-size: 1rem;
+                
+            }
+        }
+        &_btn{
+            font-size: 1.1rem;
+            margin: 1rem;
+            width: 20%;
+        }
+    }
+}
+
+@include breakpoint-up(xlaptop){
+    .hero{
+        &_img{
+            img{
+                height: 350px;
+                width: 500px;
+            }
+            margin-bottom: 5rem;
+        }
+        &_heading{  
+            h1{ 
+                margin: 0 22rem;
+                font-size: 2.2rem;
+            }
+            p{
+                &::before{
+                    top: -300%;
+                }
+                font-size: 1.1rem;
+                padding: 0.5rem 28rem; 
+            }
+        }
+        &_btn{
+            width: 30%;
+            font-size: 1.25rem;
+            margin: 1rem;
+            width: 18%;
+        }
+    }
+}

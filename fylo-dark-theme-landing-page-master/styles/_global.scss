@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    font-family: $body;
+    background-color: $emailBg-Dark-Blue;
+    // padding: 1rem;
+    // @include breakpoint-up(laptop){padding: 2.2rem 3rem;}
+}
+
+.flex{
+    display: flex;
+
+    &_jc_c{
+        justify-content: center;
+    }
+    
+    &_jc_sb{
+        justify-content: space-between;
+    }
+    
+    &_jc_sa{
+        justify-content: space-around;
+    }
+
+    &_ai_c{
+        align-items: center;
+    }
+}
+
+a:visited, a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    padding: 0.9rem 2.7rem;
+    border: none;
+    cursor: pointer;
+    color: $White;
+}
+
+ul{
+    li{
+        list-style: none;
+        &:hover{
+            cursor: pointer;
+            color: $Cyan;
+        }
+    }
+}

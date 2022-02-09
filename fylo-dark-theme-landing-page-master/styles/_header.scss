@@ -1,0 +1,40 @@
+.nav{
+    padding: 1.8rem 1.3rem 0 1.3rem;
+    @include breakpoint-up(tablet){padding: 2rem 2rem 0 2rem;}
+    @include breakpoint-up(laptop){padding: 1rem 2rem 0 2rem;}
+    @include breakpoint-up(xlaptop){padding: 2rem 4rem 0 4rem;}
+    flex-direction: row;
+    margin-bottom: 3rem;
+    @include breakpoint-up(laptop){margin-bottom: 1rem;}
+   .logo{
+        img{
+            width: 73px;
+            height: 23px;
+            @include breakpoint-up(xmobile){
+                width: 100px;
+                height: 33px;
+            }
+            @include breakpoint-up(laptop){
+                width: 140px;
+                height: 43px;
+            }
+        }
+   }
+
+   .navs{
+        font-size: 0.9rem;
+        @include breakpoint-up(xmobile){font-size:1rem}
+        @include breakpoint-up(laptop){font-size:1.2rem}
+        a{
+            &:not(:last-child){margin-right: 0.6rem;}
+            @include breakpoint-up(tablet){
+                &:not(:last-child){margin-right: 1rem;}
+            }
+            color: #ded9d9;
+            &:hover{
+                    color: $White;
+                    text-decoration: underline;
+                }
+        }
+   }
+}
